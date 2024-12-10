@@ -686,9 +686,11 @@ a:focus {
   color: #ffffff;
 }
 
-/* info section */
+/* Info Section */
 .info_section {
   background-color: #576c4c;
+  padding: 20px;
+  color: #ffffff;
 }
 
 .info_section h4 {
@@ -698,50 +700,68 @@ a:focus {
   text-transform: uppercase;
 }
 
-.info_section .contact_items {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.info_section .info_container {
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 15px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.info_section .left_content,
+.info_section .right_content {
+  flex: 1;
+}
+
+.info_section .map {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.info_section .address h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.info_section .address p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.info_section .contact_items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .info_section .contact_items a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
+  text-decoration: none;
   color: #ffffff;
+  transition: color 0.3s ease;
 }
 
 .info_section .contact_items a .img-box {
   width: 55px;
   height: 55px;
   min-width: 55px;
-  margin-right: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin-right: 10px;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #eeeff1;
-  border-radius: 100%;
+  border-radius: 50%;
+  background-color: #ffffff;
   font-size: 20px;
+  color: #576c4c;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .info_section .contact_items a h6 {
-  color: #ffffff;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -749,53 +769,57 @@ a:focus {
   color: #576c4c;
 }
 
+.info_section .contact_items a .img-box:hover {
+  background-color: #576c4c;
+  color: #ffffff;
+}
+
 .info_section .info_social {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-top: 15px;
 }
 
 .info_section .info_social a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 35px;
   height: 35px;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: #ffffff;
   color: #576c4c;
   font-size: 20px;
   margin: 0 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .info_section .info_social a:hover {
-  color: #576c4c;
+  background-color: #576c4c;
+  color: #ffffff;
 }
 
-/* end info section */
+/* Footer Section */
 .footer_section {
   background-color: #576c4c;
+  color: #ffffff;
+  padding: 20px 0;
 }
 
 .footer_section p {
   border-top: 1px solid #616060;
-  color: #ffffff;
   margin: 0 auto;
   text-align: center;
   padding: 20px 0;
+  font-size: 14px;
 }
 
 .footer_section a {
   color: inherit;
+  text-decoration: underline;
+  transition: color 0.3s ease;
 }
-/*# sourceMappingURL=style.css.map */
+
+.footer_section a:hover {
+  color: #eeeff1;
+}
